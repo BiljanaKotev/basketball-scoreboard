@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Cursed Timer Ulil";
+  src: local(CursedTimerUlil), url(CursedTimerUlil-Aznm.ttf) format("opentype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background: #1b244a;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px auto;
+  max-width: 80%;
+  text-align: center;
+  width: 40%;
+}
+
+h2,
+ul.point-increments {
+  color: #eeeeee;
+}
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  margin: 50px 0 22px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+span {
+  background-color: #000000;
+  color: #f94f6d;
+  display: inline-block;
+  font-size: 90px;
+  font-family: "Cursed Timer Ulil", sans-serif;
+  padding-top: 15px;
+  width: 100%;
+}
+
+ul.point-increments {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+li {
+  border: 1px solid white;
+  border-radius: 3px;
+  margin-bottom: 50px;
+  padding: 5px;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 845px) {
+  .container {
+    flex-direction: column;
+  }
+
+  span {
+    width: 50%;
+  }
+
+  ul.point-increments {
+    gap: 25px;
+    justify-content: center;
+  }
+}
