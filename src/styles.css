@@ -63,6 +63,7 @@ li:hover {
 @media (max-width: 845px) {
   .container {
     flex-direction: column;
+    width: auto;
   }
 
   span {
