@@ -3,6 +3,7 @@
   src: local(CursedTimerUlil), url(CursedTimerUlil-Aznm.ttf) format("opentype");
 }
 
+/* ADDING MARGIN: 0 TO A RULE FOR THE BODY TAG IS COMMON BUT ADDING THAT AND PADDING: 0 TO EVERY ELEMENT IS LIKELY UNNECESSARY. THE DEFAULT VALUE FOR PADDING AND MARGIN IS ALREADY 0. */
 * {
   padding: 0;
   margin: 0;
@@ -13,9 +14,9 @@
   display: flex;
   justify-content: space-evenly;
   margin: 50px auto;
-  max-width: 40%;
+  max-width: 80%;
   text-align: center;
-  font-family: "Cursed Timer Ulil", sans-serif;
+  width: 40%;
 }
 
 h2,
@@ -28,6 +29,8 @@ h2 {
   font-size: 40px;
   margin: 50px 0 22px 0;
   text-align: center;
+  /* SINCE THESE STRINGS ARE HARD-CODED, YOU COULD ALSO JUST CAPITALIZE THE WORDS IN YOUR HTML FILE AND REMOVE THIS TEXT-TRANSFORM */
+  text-transform: uppercase;
 }
 
 span {
@@ -35,11 +38,12 @@ span {
   color: #f94f6d;
   display: inline-block;
   font-size: 90px;
-  height: 105px;
-  width: 155px;
+  font-family: "Cursed Timer Ulil", sans-serif;
   padding-top: 15px;
+  width: 100%;
 }
 
+/* THE FONT-FAMILY FOR THESE POINT-INCREMENT BUTTONS DOESN'T MATCH THE DESIGN SPEC - TAKE A LOOK AT WHERE YOU MIGHT WANT TO ADD THE FONT DECLARATION GIVEN ALL THE PLACES WHERE IT APPEARS */
 ul.point-increments {
   display: flex;
   gap: 8px;
@@ -49,8 +53,8 @@ ul.point-increments {
 }
 
 li {
-  border: 2px solid #9aabd8;
-  border-radius: 5px;
+  /* DOUBLE CHECK THE DESIGN SPEC HERE - COLORS, BORDERS, AND BORDER RADIUS VALUES CAN BE FOUND IN THE RIGHT HAND PANEL OF THE FIGMA FILE WHEN THE POINT INCREMENT ELEMENT IS SELECTED */
+  border: 1px solid white;
   border-radius: 3px;
   margin-bottom: 50px;
   padding: 5px;
@@ -60,24 +64,18 @@ li:hover {
   cursor: pointer;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 845px) {
   .container {
     flex-direction: column;
     width: auto;
   }
 
-  .span {
-    flex-direction: column;
+  span {
+    width: 50%;
   }
 
   ul.point-increments {
     gap: 25px;
     justify-content: center;
-  }
-}
-
-@media (max-width: 900px) {
-  .container {
-    max-width: 75%;
   }
 }

@@ -1,0 +1,18 @@
+Hi There! This is my first code review so it won't be perfect but hopefully you find some of it to be useful.
+
+Generally, your project is looking great! You have covered all required functionality and been thorough in your work. I have a couple of quick comments for you to take a look at, plus some inline suggestions (in UPPERCASE to differentiate from your comments) to bring some specific lines of code to your attention. 
+
+------------------------------------------------------
+
+- Based on the design spec, the Home and Guest score areas should be displayed on the same line at 575px. Your Home and Guest sections are only on the same line for window sizes above 845px, so you could take another pass at that to align your project to the design spec if you want.
+
+- Consider the ideal user experience when the window gets wider. The design spec doesn't require any specific behavior but best practices tell us that keeping the interactive app portion of the page to some max-width would allow the app to scale up more gracefully while maintaining a great user experience. 
+
+- While your point incrementing functionality is working great, you could make it even better by making your functions reusable for more than one point+team combination. Consider passing parameters to a single point incrementing function in place of the 6 you have now. 
+
+- Nice job incorporating media queries! This is a huge part of making websites responsive so it is great to get comfortable using them as much as possible. 
+
+---------------------------------------------------
+
+Keep up the great work! Feel free to send over an updated scrim if you decide to incorporate this feedback :)
+
