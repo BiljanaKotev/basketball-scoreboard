@@ -1,34 +1,46 @@
-"use strict";
-
 const homePoints = document.getElementById("home-points");
 const guestPoints = document.getElementById("guest-points");
-let awayScore = 0;
-let homeScore = 0;
+let homeStartingPoints = 0;
+let guestStartingPoints = 0;
+const onePointHome = document.getElementById("one-point-home");
+const twoPointHome = document.getElementById("two-point-home");
+const threePointHome = document.getElementById("three-point-home");
+const onePointGuest = document.getElementById("one-point-guest");
+const twoPointGuest = document.getElementById("two-point-guest");
+const threePointGuest = document.getElementById("three-point-guest");
 
-// Functions for adding points to the home scoreboard
+// Function for adding points to the scoreboards
 
-function addOnePointHome() {
-  homePoints.innerText = homeScore += 1;
+function addPoints(points, team) {
+  if (team === "home") {
+    homePoints.innerHTML = homeStartingPoints += points;
+  } else if (team === "guest") {
+    guestPoints.innerHTML = guestStartingPoints += points;
+  }
 }
 
-function addTwoPointHome() {
-  homePoints.innerText = homeScore += 2;
-}
+// Function for adding points to the scoreboards
 
-function addThreePointHome() {
-  homePoints.innerText = homeScore += 3;
-}
+onePointHome.addEventListener("click", function () {
+  addPoints(1, "home");
+});
 
-// Functions for adding points to the guest scoreboard
+twoPointHome.addEventListener("click", function () {
+  addPoints(2, "home");
+});
 
-function addOnePointGuest() {
-  guestPoints.innerText = awayScore += 1;
-}
+threePointHome.addEventListener("click", function () {
+  addPoints(3, "home");
+});
 
-function addTwoPointGuest() {
-  guestPoints.innerText = awayScore += 2;
-}
+onePointGuest.addEventListener("click", function () {
+  addPoints(1, "guest");
+});
 
-function addThreePointGuest() {
-  guestPoints.innerText = awayScore += 3;
-}
+twoPointGuest.addEventListener("click", function () {
+  addPoints(2, "guest");
+});
+
+threePointGuest.addEventListener("click", function () {
+  addPoints(3, "guest");
+});
